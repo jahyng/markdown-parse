@@ -1,1 +1,1 @@
-[bad test](badlink.com)
+[!test) (http://www.BadLink.com]
