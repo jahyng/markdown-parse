@@ -51,15 +51,16 @@ public class MarkdownParse {
             nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
             openParen = markdown.indexOf("(", nextCloseBracket);
             closeParen = markdown.indexOf(")", openParen);
-
+            
+            if (nextOpenBracket == -1 || nextCloseBracket == -1) {
+                break;
+            }
+            
             if (!checkExtension(markdown.substring(openParen +1, closeParen)) && openParen-nextCloseBracket==1)
             {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
 
-            if (nextOpenBracket == -1 || nextCloseBracket == -1) {
-                break;
-            }
             currentIndex = closeParen + 1;
         }
         return toReturn;
