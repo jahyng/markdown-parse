@@ -49,7 +49,7 @@ public class MarkdownParseTest {
         Path fileName2 = Path.of("test-file2.md");
         String contents2 = Files.readString(fileName2);
         List links2 = List.of("https://something.com", "some-page.html");
-        //assertEquals("checks result of test file 4", links2, MarkdownParse.getLinks(contents2));
+        assertEquals("checks result of test file 4", links2, MarkdownParse.getLinks(contents2));
 
         Path fileName3 = Path.of("test-file3.md");
         String contents3 = Files.readString(fileName3);
@@ -74,12 +74,12 @@ public class MarkdownParseTest {
         Path fileName7 = Path.of("test-file7.md");
         String contents7 = Files.readString(fileName7);
         List links7 = List.of();
-        //assertEquals("checks result of test file 4", links7, MarkdownParse.getLinks(contents7));
+        assertEquals("checks result of test file 4", links7, MarkdownParse.getLinks(contents7));
 
         Path fileName8 = Path.of("test-file8.md");
         String contents8 = Files.readString(fileName8);
         List links8 = List.of();
-        //assertEquals("checks result of test file 4", links8, MarkdownParse.getLinks(contents8));
+        assertEquals("checks result of test file 4", links8, MarkdownParse.getLinks(contents8));
 
     }
     
