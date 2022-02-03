@@ -29,7 +29,7 @@ If it does we don't include it in our output if it doesn't we add it to our arra
 */
 
 /* Test Case 3
-Test Case 3 returns an incorrect password 
+Test Case 3 returns an incorrect password
 */
 
 public class MarkdownParse {
