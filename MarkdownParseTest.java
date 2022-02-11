@@ -27,31 +27,6 @@ public class MarkdownParseTest {
         List links = List.of("https://something.com", "some-page.html");
         assertEquals("checks result", links, MarkdownParse.getLinks(contents));
     }
-        
-    @Test
-    public void readFile2() throws IOException {
-        Path fileName2 = Path.of("test2-file.md");
-        String contents2 = Files.readString(fileName2);
-        List links2 = List.of();
-        assertEquals("checks result of test file 2", links2, MarkdownParse.getLinks(contents2));
-    }
-
-    @Test
-    public void readFile3() throws IOException {
-        Path fileName3 = Path.of("test3-file.md");
-        String contents3 = Files.readString(fileName3);
-        List links3 = List.of("www.edwin.com");
-        assertEquals("checks result of test file 3", links3, MarkdownParse.getLinks(contents3));
-    }
-
-    @Test
-    public void readFile4() throws IOException {
-        Path fileName4 = Path.of("test4-file.md");
-        String contents4 = Files.readString(fileName4);
-        List links4 = List.of("https://CSE15L.com");
-        assertEquals("checks result of test file 4", links4, MarkdownParse.getLinks(contents4));
-
-    }
 
     @Test
     public void testFile2() throws IOException {
