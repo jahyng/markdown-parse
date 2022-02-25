@@ -12,7 +12,12 @@ public class MarkdownParseTest {
     public void addition() {
         assertEquals(2, 1 + 1);
     }
-
+    
+    @Test
+    public void subtraction() {
+	    assertEquals(2, 4 - 2);
+    }
+    
     @Test
     public void testFile1() throws IOException {
         String contents= Files.readString(Path.of("test-file.md"));
@@ -84,7 +89,20 @@ public class MarkdownParseTest {
         List links8 = List.of("a link on the first line");
         assertEquals("checks result of test file 8", links8, MarkdownParse.getLinks(contents8));
     }
+    @Test
+    public void testSpaceAfterParen() {
+        String contents = "[title]( space-in-url.com)";
+        List<String> expect = List.of("space-in-url.com");
+        assertEquals(expect, MarkdownParse.getLinks(contents));
+    }
 
+    @Test
+    public void testSnip1() {
+        Path fileSnip1 = Path.of("report4Snip1.md");
+        String contents = Files.readString(fileSnip1);
+        List linksSnip1 = List.of("url.com","`google.com","google.com","ucsd.edu");
+        assertEquals(linksSnip1, MarkdownParse.getLinks(contents));
+    }
     
     
 }

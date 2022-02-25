@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MarkdownParse",
+            "request": "launch",
+            "mainClass": "MarkdownParse",
+            "projectName": "markdown-parse_d2aa043a"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
